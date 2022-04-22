@@ -1,0 +1,39 @@
+{
+  "Commands": [
+    {
+      "Verb": "Get",
+      "Noun": "NSHUrlacl",
+      "OriginalName": "netsh",
+      "OriginalCommandElements": [
+        "http",
+        "show",
+        "urlacl"
+      ],
+      "Platform": [
+        "Windows"
+      ],
+      "Description": "Gets URL namespace reservations.", 
+      "Usage": {
+        "Synopsis": "Gets URL namespace reservations."
+      },
+      "Parameters": [
+        {
+          "Name": "Url",
+          "ParameterType": "string",
+          "OriginalName": "url=",
+          "Description": "The fully qualified URL. If unspecified, implies all URLs.",
+          "Position": 0,
+          "NoGap": true
+        }
+      ],
+      "OutputHandlers": [
+        {
+          "ParameterSetName": "Default",
+          "HandlerType": "Function",
+          "Handler": "GetNSHUrlAcl",
+          "StreamOutput": false
+        }
+      ]
+    }
+  ]
+}

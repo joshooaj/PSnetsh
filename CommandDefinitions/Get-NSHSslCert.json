@@ -1,0 +1,45 @@
+{
+  "Commands": [
+    {
+      "Verb": "Get",
+      "Noun": "NSHSslCert",
+      "OriginalName": "netsh",
+      "OriginalCommandElements": [
+        "http",
+        "show",
+        "sslcert"
+      ],
+      "Platform": [
+        "Windows"
+      ],
+      "Description": "Gets SSL certificate bindings.",
+      "Usage": {
+        "Synopsis": "Gets SSL certificate bindings."
+      },
+      "Parameters": [
+        {
+          "Name": "IPPort",
+          "ParameterType": "string",
+          "OriginalName": "ipport=",
+          "Description": "The IPv4 or IPv6 address and port for which the SSL certificate bindings will be displayed.",
+          "Position": 0,
+          "NoGap": true
+        }
+      ],
+      "OutputHandlers": [
+        {
+          "ParameterSetName": "Default",
+          "HandlerType": "Function",
+          "Handler": "GetNSHSslCert",
+          "StreamOutput": false
+        }
+      ],
+      "Examples": [
+        {
+          "Command": "Get-NSHSslCert -IPPort 0.0.0.0:443",
+          "Description": "Gets the SslCert binding associated with the socket 0.0.0.0:443"
+        }
+      ]
+    }
+  ]
+}
